@@ -3,130 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acquista Biglietti</title>
+    <title>Acquista Biglietti Treno</title>
     <style>
         body {
-            font-family: 'Oswald', sans-serif;
-            background-color: #e0f7fa;
-            color: #00796b;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
+            background-color: #e0f7fa;
+            color: #00509E;
         }
-        table {
-            border-collapse: collapse;
-            width: 80%;
-            margin: 20px auto;
-            background-color: #b2ebf2;
-            border: 2px solid #4dd0e1;
-        }
-        th, td {
+
+        header {
+            background-color: #00796b;
+            color: white;
             padding: 15px;
             text-align: center;
-            border: 1px solid #80deea;
         }
-        th {
-            background-color: #00acc1;
-            color: white;
-        }
-        tr:nth-child(even) {
-            background-color: #e0f2f1;
-        }
-        tr:hover {
-            background-color: #b2dfdb;
-        }
-        h1 {
-            text-align: center;
-            color: #004d40;
-        }
-        .button-container {
-            width: 80%;
+
+        .container {
+            max-width: 600px;
             margin: 20px auto;
-            text-align: left;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .button-container a {
-            text-decoration: none;
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #004d40;
+            border-radius: 4px;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
             background-color: #00796b;
             color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .button-container a:hover {
-            background-color: #004d40;
-        }
-        .buy-button {
-            background-color: #00796b;
-            color: white;
-            padding: 8px 12px;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
-            font-size: 14px;
         }
-        .buy-button:hover {
+
+        .form-group button:hover {
             background-color: #004d40;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="button-container">
-        <a href="index.html">Torna alla Home</a>
-    </div>
-    <div>
-        <h1>Acquista Biglietti</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Stazione di Partenza</th>
-                    <th>Stazione di Arrivo</th>
-                    <th>Orario di Partenza</th>
-                    <th>Orario di Arrivo</th>
-                    <th>Durata</th>
-                    <th>Acquista</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Milano Centrale</td>
-                    <td>Roma Termini</td>
-                    <td>08:00</td>
-                    <td>11:30</td>
-                    <td>3h 30m</td>
-                    <td><button class="buy-button">Acquista</button></td>
-                </tr>
-                <tr>
-                    <td>Roma Termini</td>
-                    <td>Milano Centrale</td>
-                    <td>16:00</td>
-                    <td>19:30</td>
-                    <td>3h 30m</td>
-                    <td><button class="buy-button">Acquista</button></td>
-                </tr>
-                <tr>
-                    <td>Firenze Santa Maria Novella</td>
-                    <td>Napoli Centrale</td>
-                    <td>09:15</td>
-                    <td>11:45</td>
-                    <td>2h 30m</td>
-                    <td><button class="buy-button">Acquista</button></td>
-                </tr>
-                <!-- Altre linee -->
-                <tr>
-                    <td>Genova Piazza Principe</td>
-                    <td>Milano Centrale</td>
-                    <td>09:00</td>
-                    <td>10:30</td>
-                    <td>1h 30m</td>
-                    <td><button class="buy-button">Acquista</button></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+
+<header>
+    <h1>Acquista Biglietti del Treno</h1>
+</header>
+
+<div class="container">
+    <form id="ticketForm">
+        <div class="form-group">
+            <label for="departure">Stazione di partenza</label>
+            <select id="departure" name="departure" required>
+                <option value="">Seleziona una stazione...</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="arrival">Stazione di arrivo</label>
+            <select id="arrival" name="arrival" required>
+                <option value="">Seleziona una stazione...</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="date">Data di viaggio</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="passengers">Numero di passeggeri</label>
+            <select id="passengers" name="passengers" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Cerca Biglietti</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    const timetable = [
+        { line: "Linea 1", stations: ["Milano", "Bologna", "Firenze", "Roma"] },
+        { line: "Linea 2", stations: ["Roma", "Firenze", "Bologna", "Venezia"] },
+        { line: "Linea 3", stations: ["Torino", "Milano", "Venezia"] },
+        { line: "Linea 4", stations: ["Bologna", "Verona"] },
+        { line: "Linea 5", stations: ["Sesto Calende", "Gallarate", "Milano"] },
+        { line: "Linea 8", stations: ["Bari", "Napoli", "Roma"] },
+        { line: "Linea 10", stations: ["Domodossola", "Arona", "Milano"] },
+        { line: "Linea 11", stations: ["Arona", "Sesto Calende", "Milano"] }
+    ];
+
+    const allStations = Array.from(new Set(timetable.flatMap(route => route.stations))).sort();
+
+    const departureSelect = document.getElementById('departure');
+    const arrivalSelect = document.getElementById('arrival');
+
+    allStations.forEach(station => {
+        const option = document.createElement('option');
+        option.value = station;
+        option.textContent = station;
+        departureSelect.appendChild(option.cloneNode(true));
+        arrivalSelect.appendChild(option);
+    });
+
+    document.getElementById('ticketForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const departure = document.getElementById('departure').value;
+        const arrival = document.getElementById('arrival').value;
+        const date = document.getElementById('date').value;
+        const passengers = document.getElementById('passengers').value;
+
+        if (departure === arrival) {
+            alert("La stazione di partenza e di arrivo devono essere diverse.");
+            return;
+        }
+
+        const findRoutes = (currentStation, destination, visited = new Set()) => {
+            if (currentStation === destination) return [[destination]];
+            if (visited.has(currentStation)) return [];
+
+            visited.add(currentStation);
+
+            let routes = [];
+
+            timetable.forEach(route => {
+                if (route.stations.includes(currentStation)) {
+                    const currentIndex = route.stations.indexOf(currentStation);
+
+                    // Controlla stazioni successive
+                    for (let i = currentIndex + 1; i < route.stations.length; i++) {
+                        const nextStation = route.stations[i];
+                        const subRoutes = findRoutes(nextStation, destination, new Set(visited));
+                        subRoutes.forEach(subRoute => {
+                            routes.push([currentStation, ...subRoute]);
+                        });
+                    }
+
+                    // Controlla stazioni precedenti
+                    for (let i = currentIndex - 1; i >= 0; i--) {
+                        const prevStation = route.stations[i];
+                        const subRoutes = findRoutes(prevStation, destination, new Set(visited));
+                        subRoutes.forEach(subRoute => {
+                            routes.push([currentStation, ...subRoute]);
+                        });
+                    }
+                }
+            });
+
+            return routes;
+        };
+
+        const routes = findRoutes(departure, arrival);
+
+        let message = `Percorso da ${departure} a ${arrival} per il ${date} con ${passengers} passeggeri.`;
+
+        if (routes.length > 0) {
+            message += `\nPercorsi trovati:`;
+            routes.forEach((route, index) => {
+                message += `\nPercorso ${index + 1}: ${route.join(" -> ")}`;
+            });
+        } else {
+            message += `\nNessun percorso disponibile.`;
+        }
+
+        alert(message);
+    });
+</script>
+
 </body>
 </html>
