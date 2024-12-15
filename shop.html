@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pietritalia - Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Oswald', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+            color: #00509E;
+        }
+
+        header {
+            background-color: #0097a7;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .cart-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #00bcd4;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .cart-button:hover {
+            background-color: #00838f;
+        }
+
+        nav {
+            background-color: #00acc1;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        section {
+            margin: 2rem 0;
+        }
+
+        footer {
+            background-color: #00796b;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .cta {
+            background-color: #00bcd4;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .cta:hover {
+            background-color: #00838f;
+        }
+
+        .product {
+            background-color: #b2ebf2;
+            margin: 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: left;
+            display: inline-block;
+            width: calc(33% - 2rem);
+            box-sizing: border-box;
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .product h3 {
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shop Pietritalia</h1>
+        <p>Acquista i nostri prodotti esclusivi</p>
+        <button class="cart-button" id="cartButton">Il tuo carrello (0)</button>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#prodotti">Prodotti</a>
+        <a href="#contatti">Contatti</a>
+    </nav>
+
+    <main>
+        <section id="prodotti">
+            <h2>I nostri Prodotti</h2>
+            <div class="product">
+                <img src="prodotto1.jpg" alt="Prodotto 1">
+                <h3>Carta PietroPa</h3>
+                <p>La nostra carta fedeltà ufficiale, con la quale si potrà accedere a servizi specifici e avere alcuni sconti.</p>
+                <p>€19.99 al mese</p>
+                <button class="cta" onclick="addToCart()">Aggiungi al carrello</button>
+            </div>
+            <div class="product">
+                <img src="prodotto2.jpg" alt="Prodotto 2">
+                <h3>Kit anti-pietro</h3>
+                <p>Il kit ufficale per difendersi da Pietro Pagani</p>
+                <p>€99.99</p>
+                <button class="cta" onclick="addToCart()">Aggiungi al carrello</button>
+            </div>
+            <div class="product">
+                <img src="prodotto3.jpg" alt="Prodotto 3">
+                <h3>Kit anti-kemllo</h3>
+                <p>Un kit essenziale per famiglie con bambini, utilissimo per difersi da Samuele Chemello.</p>
+                <p>€999.99</p>
+                <button class="cta" onclick="addToCart()">Aggiungi al carrello</button>
+            </div>
+        </section>
+
+        <section id="contatti">
+            <h2>Contatti</h2>
+            <p>Hai domande? Contattaci all'indirizzo <a href="mailto:info@pietritalia.it">info@pietritalia.it</a>.</p>
+            <p>Fine.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pietritalia S.p.A. - Tutti i diritti riservati</p>
+    </footer>
+
+    <script>
+        let cartCount = 0;
+
+        function addToCart() {
+            cartCount++;
+            document.getElementById('cartButton').innerText = `Il tuo carrello (${cartCount})`;
+        }
+    </script>
+</body>
+</html>

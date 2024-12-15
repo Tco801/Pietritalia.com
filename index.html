@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pietritalia - Società Ferroviaria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Oswald', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+            color: #00509E;
+        }
+
+        header {
+            background-color: #0097a7;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #00acc1;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        section {
+            margin: 2rem 0;
+        }
+
+        footer {
+            background-color: #00796b;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .cta {
+            background-color: #00bcd4;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .cta:hover {
+            background-color: #00838f;
+        }
+
+
+        .map {
+            margin: 2rem auto;
+            max-width: 600px;
+        }
+
+        .testimonials {
+            background-color: #b2ebf2;
+            padding: 2rem;
+            border-radius: 5px;
+        }
+
+        .testimonial {
+            font-style: italic;
+            margin: 1rem 0;
+        }
+
+        .job-form {
+            margin-top: 1rem;
+        }
+
+        .blog {
+            text-align: left;
+            margin-top: 2rem;
+        }
+
+        .blog article {
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pietritalia</h1>
+        <p>Connettiamo l'Italia su rotaie</p>
+    </header>
+
+    <nav>
+        <a href="#servizi">Servizi</a>
+        <a href="#orari">Orari</a>
+        <a href="#contatti">Contatti</a>
+        <a href="galleria_treni.html">I nostri treni</a>
+        <a href="#sostenibilita">Sostenibilità</a>
+        <a href="offerte.html">Offerte</a>
+        <a href="#lavora">Lavora con Noi</a>
+    </nav>
+
+    <main>
+        <section id="servizi">
+            <h2>Servizi</h2>
+            <p>Offriamo soluzioni ferroviarie moderne e sostenibili per passeggeri e merci.</p>
+            <p>Vendita al dettaglio di tutti gli articoli di kit-anti-pietro SRL.</p>
+        </section>
+
+        <section id="orari">
+            <h2>Orari</h2>
+            <p>Consulta gli orari dei treni e pianifica il tuo viaggio con facilità.</p>
+            <button class="cta" onclick="window.location.href='orari.html';">Consulta Orari</button>
+        </section>
+
+        <section id="contatti">
+            <h2>Contatti</h2>
+            <p>Hai domande? Contattaci all'indirizzo <a href="mailto:info@pietritalia.it">info@pietritalia.it</a>.</p>
+        </section>
+
+        <section id="sostenibilita">
+            <h2>Sostenibilità</h2>
+            <p>Pietritalia è impegnata a ridurre l'impatto ambientale. I nostri treni sono alimentati da energia rinnovabile e contribuiscono a ridurre le emissioni di CO2.</p>
+            <p>Scopri il primo treno alimentato a schavi d'europa, per i clienti che possiedono la carta PietroPa sarà possibile visitare la sala schiavi, dove il pietro viene fatto muovere.</p>
+        </section>
+
+        <section id="offerte">
+            <h2>Offerte Speciali</h2>
+            <p>Scopri le nostre promozioni per studenti, famiglie e gruppi. Viaggia risparmiando!</p>
+            <button class="cta" onclick="window.location.href='offerte.html';">Scopri le offerte!</button>
+        </section>
+
+        <section id="testimonianze" class="testimonials">
+            <h2>Testimonianze</h2>
+            <blockquote class="testimonial">"Servizio eccellente! Viaggiare con Pietritalia è sempre un piacere."</blockquote>
+            <blockquote class="testimonial">"Treni puntuali e confortevoli. Consigliatissimo!"</blockquote>
+        </section>
+
+        <section id="lavora">
+            <h2>Lavora con Noi</h2>
+            <p>Vuoi unirti al nostro team? Invia la tua candidatura oggi stesso.</p>
+            <form class="job-form">
+                <label for="name">Nome:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="cv">Carica il tuo CV:</label><br>
+                <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required><br><br>
+                <button type="submit" class="cta">Invia Candidatura</button>
+            </form>
+        </section>
+
+        <section id="shop" class="shop-section">
+ <h2>Shop</h2> 
+ <p>Visita il nostro shop per acquistare prodotti esclusivi!</p> <button class="cta" onclick="window.location.href='shop.html';">Vai allo Shop</button>
+        </section>
+
+        <section id="blog" class="blog">
+            <h2>Novità e Aggiornamenti</h2>
+            <article>
+                <h3>Inaugurazione della nuova tratta Milano-Roma</h3>
+                <p>Abbiamo aperto una nuova linea ad alta velocità per collegare meglio il nord e il sud del paese.</p>
+            </article>
+            <article>
+                <h3>Innovazioni nella mobilità sostenibile</h3>
+                <p>Scopri come Pietritalia sta adottando tecnologie ecologiche per i suoi treni.</p>
+                <p>Scopri sui nostri treni come eseguiamo la raccolta differenziata correttamente.</p>
+            </article>
+            <article>
+                <h3>Innovazioni nella mobilità sostenibile</h3>
+                <p>Scopri il nuovo freccia pietro di ultima generazione, sedili in pietra come tutti i treni più moderni, pronto per guasti occasionali e, con una sezione interamente dedicata a Pinta.</p>
+                <p>Fine.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pietritalia S.p.A. - Tutti i diritti riservati</p>
+</body>
+</html>
+
+
