@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acquista Biglietti</title>
+    <style>
+        body {
+            font-family: 'Oswald', sans-serif;
+            background-color: #e0f7fa;
+            color: #00796b;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+            background-color: #b2ebf2;
+            border: 2px solid #4dd0e1;
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #80deea;
+        }
+        th {
+            background-color: #00acc1;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #e0f2f1;
+        }
+        tr:hover {
+            background-color: #b2dfdb;
+        }
+        h1 {
+            text-align: center;
+            color: #004d40;
+        }
+        .button-container {
+            width: 80%;
+            margin: 20px auto;
+            text-align: left;
+        }
+        .button-container a {
+            text-decoration: none;
+            background-color: #00796b;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .button-container a:hover {
+            background-color: #004d40;
+        }
+        .buy-button {
+            background-color: #00796b;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .buy-button:hover {
+            background-color: #004d40;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="button-container">
+        <a href="index.html">Torna alla Home</a>
+    </div>
+    <div>
+        <h1>Acquista Biglietti</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Stazione di Partenza</th>
+                    <th>Stazione di Arrivo</th>
+                    <th>Orario di Partenza</th>
+                    <th>Orario di Arrivo</th>
+                    <th>Durata</th>
+                    <th>Acquista</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Milano Centrale</td>
+                    <td>Roma Termini</td>
+                    <td>08:00</td>
+                    <td>11:30</td>
+                    <td>3h 30m</td>
+                    <td><button class="buy-button">Acquista</button></td>
+                </tr>
+                <tr>
+                    <td>Roma Termini</td>
+                    <td>Milano Centrale</td>
+                    <td>16:00</td>
+                    <td>19:30</td>
+                    <td>3h 30m</td>
+                    <td><button class="buy-button">Acquista</button></td>
+                </tr>
+                <tr>
+                    <td>Firenze Santa Maria Novella</td>
+                    <td>Napoli Centrale</td>
+                    <td>09:15</td>
+                    <td>11:45</td>
+                    <td>2h 30m</td>
+                    <td><button class="buy-button">Acquista</button></td>
+                </tr>
+                <!-- Altre linee -->
+                <tr>
+                    <td>Genova Piazza Principe</td>
+                    <td>Milano Centrale</td>
+                    <td>09:00</td>
+                    <td>10:30</td>
+                    <td>1h 30m</td>
+                    <td><button class="buy-button">Acquista</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
