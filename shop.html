@@ -70,9 +70,6 @@
             color: white;
             text-align: center;
             padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
         }
 
         .cta {
@@ -106,6 +103,32 @@
 
         .product h3 {
             margin: 0.5rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .product {
+                width: calc(50% - 2rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product {
+                width: 100%;
+            }
+
+            header {
+                padding: 1rem;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 0.5rem 0;
+            }
         }
     </style>
 </head>
@@ -164,13 +187,11 @@
                 <p>Offerta illimitata</p>
                 <button class="cta" onclick="addToCart()">Aggiungi al carrello</button>
             </div>
-<div class="product">
+            <div class="product">
                 <h3>Biglietti</h3>
                 <p>Acquista i biglietti</p>
-            <button class="cta" onclick="window.location.href='acquista1.html';">Acquista ora!</button>
-
+                <button class="cta" onclick="window.location.href='acquista1.html';">Acquista ora!</button>
             </div>
-
         </section>
 
         <section id="contatti">
