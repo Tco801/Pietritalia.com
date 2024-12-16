@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recensioni - Pietritalia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Oswald', sans-serif;
+            background-color: #e0f7fa;
+            color: #00796b;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0097a7;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #00acc1;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+        footer {
+            background-color: #00796b;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .cta {
+            background-color: #00bcd4;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .cta:hover {
+            background-color: #00838f;
+        }
+        .recensione {
+            background-color: #b2ebf2;
+            padding: 1rem;
+            margin: 1rem auto;
+            width: 80%;
+            border-radius: 5px;
+            text-align: left;
+        }
+        form {
+            margin: 2rem auto;
+            width: 80%;
+            background-color: #e0f2f1;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #80deea;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Recensioni - Pietritalia</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="orari.html">Orari</a>
+        <a href="shop.html">Shop</a>
+        <a href="contatti.html">Contatti</a>
+    </nav>
+
+    <main>
+        <section id="recensioni">
+            <h2>Recensioni degli Utenti</h2>
+            <div class="recensione">
+                <p>"Servizio eccellente, treni sempre puntuali!" - Mario Rossi</p>
+            </div>
+            <div class="recensione">
+                <p>"Treni confortevoli e personale gentile. Viaggio spesso con Pietritalia!" - Laura Bianchi</p>
+            </div>
+            <div class="recensione">
+                <p>"Ottimo servizio clienti, rispondono rapidamente a tutte le domande." - Carlo Verdi</p>
+            </div>
+
+            <!-- Form per inviare nuove recensioni -->
+            <form>
+                <h2>Lascia una Recensione</h2>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="recensione">Recensione:</label>
+                <textarea id="recensione" name="recensione" rows="4" required></textarea>
+                <button type="submit" class="cta">Invia Recensione</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pietritalia S.p.A. - Tutti i diritti riservati</p>
+    </footer>
+</body>
+</html>
