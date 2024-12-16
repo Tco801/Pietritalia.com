@@ -75,6 +75,74 @@
         .cta:hover {
             background-color: #00838f;
         }
+        img, .map {
+            max-width: 100%;
+            height: auto;
+        }
+        .testimonials {
+            background-color: #b2ebf2;
+            padding: 2rem;
+            border-radius: 5px;
+        }
+        .testimonial {
+            font-style: italic;
+            margin: 1rem 0;
+        }
+        .job-form {
+            margin-top: 1rem;
+        }
+        .job-form input,
+        .job-form button {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        .blog {
+            text-align: left;
+            margin-top: 2rem;
+        }
+        .blog article {
+            margin-bottom: 1.5rem;
+        }
+        .github-section {
+            background-color: #e0f7fa;
+            padding: 2rem;
+            text-align: center;
+        }
+        .github-section a {
+            color: #00509E;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .github-section a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            header {
+                padding: 0.5rem;
+            }
+            nav a {
+                font-size: 0.9rem;
+            }
+            main {
+                padding: 1rem;
+            }
+            .cta {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+            footer {
+                font-size: 0.8rem;
+            }
+        }
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+            }
+            .job-form input,
+            .job-form button {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -106,15 +174,65 @@
             <p>Scopri cosa dicono i nostri clienti del servizio Pietritalia.</p>
             <button class="cta" onclick="window.location.href='recensioni.html';">Leggi le Recensioni</button>
         </section>
-
         <section id="orari">
             <h2>Orari</h2>
             <p>Consulta gli orari dei treni e pianifica il tuo viaggio con facilità.</p>
             <button class="cta" onclick="window.location.href='orari.html';">Consulta Orari</button>
         </section>
 
+        <section id="contatti">
+            <h2>Contatti</h2>
+            <p>Hai domande? Contattaci all'indirizzo <a href="mailto:info@pietritalia.it">info@pietritalia.it</a>.</p>
+        </section>
+        <section id="sostenibilita">
+            <h2>Sostenibilità</h2>
+            <p>Pietritalia è impegnata a ridurre l'impatto ambientale. I nostri treni sono alimentati da energia rinnovabile e contribuiscono a ridurre le emissioni di CO2.</p>
+        </section>
         <!-- Resto del codice invariato -->
 
+        <section id="testimonianze" class="testimonials">
+            <h2>Testimonianze</h2>
+            <blockquote class="testimonial">"Servizio eccellente! Viaggiare con Pietritalia è sempre un piacere."</blockquote>
+            <blockquote class="testimonial">"Treni puntuali e confortevoli. Consigliatissimo!"</blockquote>
+        </section>
+        <section id="lavora">
+            <h2>Lavora con Noi</h2>
+            <p>Vuoi unirti al nostro team? Invia la tua candidatura oggi stesso.</p>
+            <form class="job-form">
+                <label for="name">Nome:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="cv">Carica il tuo CV:</label><br>
+                <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required><br><br>
+                <button type="submit" class="cta">Invia Candidatura</button>
+            </form>
+        </section>
+        <section id="shop" class="shop-section">
+ <h2>Shop</h2> 
+ <p>Visita il nostro shop per acquistare prodotti esclusivi!</p> <button class="cta" onclick="window.location.href='shop.html';">Vai allo Shop</button>
+        </section>
+        <section id="blog" class="blog">
+            <h2>Novità e Aggiornamenti</h2>
+            <article>
+                <h3>Inaugurazione della nuova tratta Milano-Roma</h3>
+                <p>Abbiamo aperto una nuova linea ad alta velocità per collegare meglio il nord e il sud del paese.</p>
+            </article>
+            <article>
+                <h3>Innovazioni nella mobilità sostenibile</h3>
+                <p>Scopri come Pietritalia sta adottando tecnologie ecologiche per i suoi treni.</p>
+                <p>Scopri sui nostri treni come eseguiamo la raccolta differenziata correttamente.</p>
+            </article>
+            <article>
+                <h3>Innovazioni nella mobilità sostenibile</h3>
+                <p>Scopri il nuovo freccia pietro di ultima generazione, sedili in pietra come tutti i treni più moderni, pronto per guasti occasionali e, con una sezione interamente dedicata a Pinta.</p>
+                <p>Fine.</p>
+            </article>
+        </section>
+         <section id="github" class="github-section">
+            <h2>La pagina GitHub di pietritalia</h2>
+            <p>Visualizza il codice e alcuni segreeti del sito su <a href="https://github.com/Tco801/Pietritalia.com" target="_blank">GitHub</a></p>
+        </section>
     </main>
 
     <footer>
