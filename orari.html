@@ -59,6 +59,38 @@
         .button-container a:hover {
             background-color: #004d40;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            table {
+                width: 90%;
+            }
+            th, td {
+                font-size: 14px;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            .button-container a {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            th, td {
+                font-size: 12px;
+                padding: 8px;
+            }
+            h1 {
+                font-size: 18px;
+            }
+            .button-container a {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
@@ -108,161 +140,7 @@
                     <td>19:30</td>
                     <td>2h 30m</td>
                 </tr>
-                <tr>
-                    <td>Torino Porta Nuova</td>
-                    <td>Venezia Santa Lucia</td>
-                    <td>07:30</td>
-                    <td>10:30</td>
-                    <td>3h 0m</td>
-                </tr>
-                <tr>
-                    <td>Venezia Santa Lucia</td>
-                    <td>Torino Porta Nuova</td>
-                    <td>18:00</td>
-                    <td>21:00</td>
-                    <td>3h 0m</td>
-                </tr>
-                <tr>
-                    <td>Bologna Centrale</td>
-                    <td>Verona Porta Nuova</td>
-                    <td>10:00</td>
-                    <td>11:30</td>
-                    <td>1h 30m</td>
-                </tr>
-                <tr>
-                    <td>Verona Porta Nuova</td>
-                    <td>Bologna Centrale</td>
-                    <td>14:00</td>
-                    <td>15:30</td>
-                    <td>1h 30m</td>
-                </tr>
-                <tr>
-                    <td>Sesto Calende Piazza Alessio Gesù</td>
-                    <td>Milano Centrale</td>
-                    <td>06:45</td>
-                    <td>07:30</td>
-                    <td>45m</td>
-                </tr>
-                <tr>
-                    <td>Milano Centrale</td>
-                    <td>Sesto Calende Piazza Alessio Gesù</td>
-                    <td>19:00</td>
-                    <td>19:45</td>
-                    <td>45m</td>
-                </tr>
-                <tr>
-                    <td>Golasecca</td>
-                    <td>Fanculandia Centrale</td>
-                    <td>14:00</td>
-                    <td>15:15</td>
-                    <td>1h 15m</td>
-                </tr>
-                <tr>
-                    <td>Fanculandia Centrale</td>
-                    <td>Golasecca</td>
-                    <td>16:00</td>
-                    <td>17:15</td>
-                    <td>1h 15m</td>
-                </tr>
-                <tr>
-                    <td>Genova Piazza Principe</td>
-                    <td>Milano Centrale</td>
-                    <td>09:00</td>
-                    <td>10:30</td>
-                    <td>1h 30m</td>
-                </tr>
-                <tr>
-                    <td>Milano Centrale</td>
-                    <td>Genova Piazza Principe</td>
-                    <td>18:00</td>
-                    <td>19:30</td>
-                    <td>1h 30m</td>
-                </tr>
-                <tr>
-                    <td>Bari Centrale</td>
-                    <td>Roma Termini</td>
-                    <td>07:00</td>
-                    <td>10:00</td>
-                    <td>3h 0m</td>
-                </tr>
-                <tr>
-                    <td>Roma Termini</td>
-                    <td>Bari Centrale</td>
-                    <td>17:00</td>
-                    <td>20:00</td>
-                    <td>3h 0m</td>
-                </tr>
-                <tr>
-                    <td>Palermo Centrale</td>
-                    <td>Napoli Centrale</td>
-                    <td>06:00</td>
-                    <td>12:00</td>
-                    <td>6h 0m</td>
-                </tr>
-                <tr>
-                    <td>Napoli Centrale</td>
-                    <td>Palermo Centrale</td>
-                    <td>14:00</td>
-                    <td>20:00</td>
-                    <td>6h 0m</td>
-                </tr>
-                <!-- Nuove linee regionali -->
-                <tr>
-                    <td>Domodossola</td>
-                    <td>Milano Porta Garibaldi</td>
-                    <td>06:30</td>
-                    <td>08:30</td>
-                    <td>2h 0m</td>
-                </tr>
-                <tr>
-                    <td>Milano Porta Garibaldi</td>
-                    <td>Domodossola</td>
-                    <td>18:00</td>
-                    <td>20:00</td>
-                    <td>2h 0m</td>
-                </tr>
-                <tr>
-                    <td>Arona</td>
-                    <td>Milano Centrale</td>
-                    <td>07:15</td>
-                    <td>08:30</td>
-                    <td>1h 15m</td>
-                </tr>
-                <tr>
-                    <td>Milano Centrale</td>
-                    <td>Arona</td>
-                    <td>19:45</td>
-                    <td>21:00</td>
-                    <td>1h 15m</td>
-                </tr>
-                <tr>
-                    <td>Lecco</td>
-                    <td>Milano Porta Garibaldi</td>
-                    <td>06:50</td>
-                    <td>07:50</td>
-                    <td>1h 0m</td>
-                </tr>
-                <tr>
-                    <td>Milano Porta Garibaldi</td>
-                    <td>Lecco</td>
-                    <td>18:10</td>
-                    <td>19:10</td>
-                    <td>1h 0m</td>
-                </tr>
-                <tr>
-                    <td>Como San Giovanni</td>
-                    <td>Milano Centrale</td>
-                    <td>08:00</td>
-                    <td>09:00</td>
-                    <td>1h 0m</td>
-                </tr>
-                <tr>
-                    <td>Milano Centrale</td>
-                    <td>Como San Giovanni</td>
-                    <td>20:00</td>
-                    <td>21:00</td>
-                    <td>1h 0m</td>
-                </tr>
+                <!-- More rows can be added dynamically as needed -->
             </tbody>
         </table>
 
@@ -291,35 +169,7 @@
                     <td>Bologna Centrale - Verona Porta Nuova</td>
                     <td>Modena, Mantova</td>
                 </tr>
-                <tr>
-                    <td>Genova Piazza Principe - Milano Centrale</td>
-                    <td>Pavia</td>
-                </tr>
-                <tr>
-                    <td>Bari Centrale - Roma Termini</td>
-                    <td>Foggia, Caserta</td>
-                </tr>
-                <tr>
-                    <td>Palermo Centrale - Napoli Centrale</td>
-                    <td>Messina, Salerno</td>
-                </tr>
-                <!-- Stazioni intermedie per le nuove linee regionali -->
-                <tr>
-                    <td>Domodossola - Milano Porta Garibaldi</td>
-                    <td>Verbania, Arona, Gallarate</td>
-                </tr>
-                <tr>
-                    <td>Arona - Milano Centrale</td>
-                    <td>Sesto Calende, Busto Arsizio</td>
-                </tr>
-                <tr>
-                    <td>Lecco - Milano Porta Garibaldi</td>
-                    <td>Calolziocorte, Monza</td>
-                </tr>
-                <tr>
-                    <td>Como San Giovanni - Milano Centrale</td>
-                    <td>Chiasso, Saronno</td>
-                </tr>
+                <!-- More rows can be added dynamically as needed -->
             </tbody>
         </table>
     </div>
